@@ -52,7 +52,7 @@ data-cleaning-preprocessing/
 │   └── cleaned_customer_data.csv
 │
 ├── notebooks/
-│   └── data_cleaning.ipynb
+│   └── task01_data_cleaning.ipynb
 │
 ├── clean_data.py
 ├── README.md
