@@ -61,11 +61,10 @@ df["Purchase_Date"] = (
     .str.strip()
 )
 
-
-df["Purchase_Date"] = pd.to_datetime(
-    df["Purchase_Date"],
-    format="mixed",
-    errors="coerce"
+df["Purchase_Date"] = df["Purchase_Date"].apply(
+    lambda x: pd.to_datetime(x, format="%Y-%m-%d", errors="coerce")
+    if str(x).startswith("2026-")
+    else pd.to_datetime(x, format="%d-%m-%Y", errors="coerce")
 )
 
 
